@@ -1,0 +1,45 @@
+###################
+#                  #
+# Copiar todo esto #
+#                  #
+####################
+# Hecho con gusto por Carla Carolina Pérez Hernández (UAEH)
+#V9
+# LABORATORIO - Gráficos en R con ggplot2 para Ciencia de Datos
+# editar con temas de ggplot2
+
+
+
+#instalando paquete con los datos
+#install.packages("gapminder")
+#install.packages("ggplot2")
+
+
+
+# cargar libreria ggplot2 y gapminder
+library(ggplot2)
+library(gapminder)
+
+# cargando datos a entorno
+data("gapminder")
+
+# filtrando por año 2007
+gapminder2007 <- gapminder[gapminder$year == '2007', ]
+
+
+
+
+# haciendo grafica de puntos
+
+
+
+
+# temas básicos
+
+
+# mas temas
+# install.packages('ggthemes')
+library(ggthemes)
+
+# temas y colores
+

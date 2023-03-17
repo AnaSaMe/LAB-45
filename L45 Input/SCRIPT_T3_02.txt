@@ -1,0 +1,68 @@
+####################
+#                  #
+# Copiar todo esto #
+#                  #
+####################
+# Hecho con gusto por Carla Carolina Pérez Hernández (UAEH)
+ #v2
+# LABORATORIO - Gráficos en R con ggplot2 para Ciencia de Datos
+#Grafica de lineas en R 
+
+
+
+#instalando paquete con los datos
+#install.packages("gapminder")
+#install.packages("ggplot2")
+# Grafica de lineas en R
+
+
+# cargar libreria ggplot2 y gapminder
+library(ggplot2)
+library(gapminder)
+
+#cargando datos a entorno
+data("gapminder")
+
+# filtrando ESPAÑA
+
+
+# como hacer grafica de puntos con ggplot2
+
+
+
+
+# como modificar tipo de linea y color
+
+
+
+
+# como modificar tamaño y hacer flecha
+
+
+
+
+# como agregar puntos
+
+hispam_vec = c(
+  'Argentina', 'Brazil', 'Bolivia', 'Chile', 'Colombia',
+  'Costa Rica', 'Cuba', 'Dominican Republic',
+  'Ecuador', 'El Salvador', 'Guatemala', 'Honduras',
+  'Mexico', 'Nicaragua', 'Panama', 'Paraguay',
+  'Peru', 'Uruguay',
+  'Spain', 'Puerto Rico',
+  'Venezuela' )
+
+
+
+# gapminder paises de habla hispana
+
+
+# crear un objeto df
+
+
+
+# probando diferentes aestetics
+
+
+#exportar dataframe
+

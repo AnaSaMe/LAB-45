@@ -1,0 +1,45 @@
+####################
+#                  #
+# Copiar todo esto #
+#                  #
+####################
+# Hecho con gusto por _____________________________________
+#V6
+# LABORATORIO - Gráficos en R con ggplot2 para Ciencia de Datos
+# manipular leyendas
+
+
+
+#instalando paquete con los datos
+#install.packages("gapminder")
+#install.packages("ggplot2")
+
+
+
+# cargar libreria ggplot2 y gapminder
+library(ggplot2)
+library(gapminder)
+
+
+
+# colocando texto base
+
+
+# mostrar la grafica
+
+
+# quitar titulo de la leyenda
+
+
+# quitar toda la leyenda
+
+
+# cambiar la leyenda de posición
+# opciones: # rigth, left, bottom, top
+
+
+# cambiar con coordenadas de 0 a 1
+
+
+
+

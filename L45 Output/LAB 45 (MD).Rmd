@@ -1,0 +1,190 @@
+---
+title: "LAB 45 (MD)"
+author: "AnaGSanjuanM"
+date: "2023-03-17"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+-----------------LABORATORIO 45---------------------
+
+ Hecho con gusto por Dra. Carla Carolina Pérez Hernández (UAEH)
+
+------------Alumna: Ana Grisel Sanjuan Merida--------------------
+
+
+LABORATORIO - Gráficos en R con ggplot2 para Ciencia de Datos
+
+Grafica de puntos en R (PARTE 1)
+
+Instalando paquete con los datos
+
+install.packages("gapminder")
+
+Cargando paquete con los datos
+```{r}
+library(gapminder)
+```
+
+
+Cargando datos a entorno. Aparece en el environment con 1704 observaciones
+```{r}
+data("gapminder")
+```
+
+
+Filtrando por año 2007. #Aparece en el environment con 142 observaciones
+```{r}
+gapminder2007 <- gapminder[gapminder$year == '2007', ]
+```
+
+
+Para visualizar
+```{r}
+head(gapminder2007)
+```
+
+Cargar libreria ggplot2
+```{r}
+library(ggplot2)
+```
+
+
+Gráfica de puntos con ggplot2
+
+Mapear con elemento estético aes
+
+Las X serán el PIB per cápita gdpPercap
+
+Las Y serán la expectativa de vida
+
+Tipo de gráfica de puntos
+```{r}
+ggplot(data=gapminder2007,
+       mapping = aes (x = gdpPercap,
+                      y = lifeExp)) + 
+  geom_point()
+```
+
+Probando diferentes colores
+
+Gráfica de puntos con ggplot2
+
+Mapear con elemento estético aes
+
+Las X serán el PIB per cápita gdpPercap
+
+Las Y serán la expectativa de vida
+Tipo de gráfica de puntos
+
+El color por continente
+```{r}
+ggplot(data=gapminder2007,
+       mapping = aes (x = gdpPercap,
+                      y = lifeExp,
+                      color = continent)) +
+  geom_point()
+```
+
+
+Probando diferentes más aestetics
+
+Gráfica de puntos con ggplot2
+
+Mapear con elemento estético aes
+
+Las X serán el PIB per cápita gdpPercap
+
+Las Y serán la expectativa de vida
+
+Tipo de gráfica de puntos
+
+El color por continente
+
+Forma dada por el continente
+
+Tamaño de los puntos dependiendo de la población
+```{r}
+ggplot(data=gapminder2007,
+       mapping = aes (x = gdpPercap,
+                      y = lifeExp,
+                      color = continent,
+                      shape = continent,
+                      size = pop)) +
+  geom_point()
+```
+
+Colocando texto
+
+Gráfica de puntos con ggplot2
+
+Mapear con elemento estético aes
+
+Las X serán el PIB per cápita gdpPercap
+
+Las Y serán la expectativa de vida
+
+Tipo de gráfica de puntos
+
+El color por continente
+
+Forma dada por el continente
+
+Tamaño de los puntos dependiendo de la población
+
+Geometría de texto. Etiqueta que proviene de gapminder2007, definido por países country
+
+Color negro y de tamaño 3
+```{r}
+ggplot(data=gapminder2007,
+       mapping = aes (x = gdpPercap,
+                      y = lifeExp,
+                      color = continent,
+                      shape = continent,
+                      size = pop)) +
+  geom_point() +
+  geom_text(label = gapminder2007$country,
+            color = "black" ,
+            size = 3)
+```
+
+
+Colocando líneas de regresión
+
+Tipo de gráfica de puntos
+
+El color por continente
+
+Forma dada por el continente
+
+Líneas de regresión. Método lineal
+```{r}
+ggplot(data=gapminder2007,
+       mapping = aes (x = gdpPercap,
+                      y = lifeExp,
+                      color = continent)) +
+  geom_point() +
+  geom_smooth(method = lm)
+```
+
+Tipo de gráfica de puntos
+
+El color por continente
+
+Forma dada por el continente
+
+Líneas de regresión hasta el final del gráfico con se y fullrange
+```{r}
+ggplot(data=gapminder2007,
+       mapping = aes (x = gdpPercap,
+                      y = lifeExp,
+                      color = continent)) +
+  geom_point() +
+  geom_smooth(method = lm,
+              se = FALSE,
+              fullrange = TRUE)
+```
+
+
+-----------------------FIN LABORATORIO 45---------------------------

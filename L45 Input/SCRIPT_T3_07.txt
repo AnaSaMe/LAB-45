@@ -1,0 +1,59 @@
+####################
+#                  #
+# Copiar todo esto #
+#                  #
+####################
+# Hecho con gusto por Carla Carolina Pérez Hernández (UAEH)
+#V7
+# LABORATORIO - Gráficos en R con ggplot2 para Ciencia de Datos
+# faceting (romper un gráfica en varias dentro de una cuadrícula)
+
+
+
+#instalando paquete con los datos
+#install.packages("gapminder")
+#install.packages("ggplot2")
+
+
+
+# cargar libreria ggplot2 y gapminder
+library(ggplot2)
+library(gapminder)
+
+# cargando datos a entorno
+data("gapminder")
+
+# filtrando por año 2007
+gapminder2007 <- gapminder[gapminder$year == '2007', ]
+
+
+# colocando grafica base
+
+
+# crear objeto p
+
+
+# facet_wrap (recomendado con una variable)
+
+
+# manipulando número de filas
+
+
+# manipulando número de columnas
+
+
+
+
+# facet con dos variables
+# creando data para 2002 y 2007
+
+
+# creando grafica base "g2"
+
+
+
+#esperanza de vida por continente y año (forma 1)
+
+
+#esperanza de vida por continente y año (forma 2)
+
